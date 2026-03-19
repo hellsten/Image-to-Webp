@@ -24,11 +24,16 @@ pip install pillow
 
 ## 📦 Usage
 
-1. Place your images inside a `.zip` file  
-2. Update the script filename if needed:
+1. Place your images inside a `.zip` file named:
 
-```python
-input_zip = "eventureAttendingEvent.zip"
+```
+images.zip
+```
+
+2. The script will automatically extract into:
+
+```
+images_input/
 ```
 
 3. Run the script:
@@ -41,11 +46,15 @@ python process_images.py
 
 ## ⚙️ What It Does
 
-- Extracts images from the zip file
+- Extracts images from `images.zip`
 - Crops them to match a target aspect ratio
 - Resizes them to a fixed size (default: 1280x720)
 - Converts them to `.webp` format
-- Saves them into an output folder
+- Saves them into:
+
+```
+images_webp/
+```
 
 ---
 
@@ -61,12 +70,12 @@ def crop_and_resize(img, target_size):
 
 ---
 
-## 📁 Output
-
-Processed images will be saved in:
+## 📁 Folder Structure
 
 ```
-eventure_webp/
+images.zip
+images_input/
+images_webp/
 ```
 
 ---
